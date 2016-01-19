@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xdx-39-AKR">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Items View Controller-->
+        <scene sceneID="WHZ-ZN-qPe">
+            <objects>
+                <viewController id="Dol-Ip-fgv" customClass="ItemsViewController" customModule="qiita_client" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hwy-Fw-Crp"/>
+                        <viewControllerLayoutGuide type="bottom" id="cxx-yP-s6O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yu1-3O-AeO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6jg-kP-lpD">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6jg-kP-lpD" firstAttribute="top" secondItem="yu1-3O-AeO" secondAttribute="topMargin" id="35G-J3-Pxr"/>
+                            <constraint firstItem="cxx-yP-s6O" firstAttribute="top" secondItem="6jg-kP-lpD" secondAttribute="bottom" id="Drv-Yj-0u0"/>
+                            <constraint firstItem="6jg-kP-lpD" firstAttribute="trailing" secondItem="yu1-3O-AeO" secondAttribute="trailingMargin" constant="20" id="VnQ-5H-4mZ"/>
+                            <constraint firstItem="6jg-kP-lpD" firstAttribute="leading" secondItem="yu1-3O-AeO" secondAttribute="leadingMargin" constant="-20" id="xO7-Dy-MVA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Eyg-1T-o7F"/>
+                    <connections>
+                        <outlet property="tableView" destination="6jg-kP-lpD" id="NPi-p2-vec"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="plM-vb-dJV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1013" y="303"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="A2E-HH-GR3">
+            <objects>
+                <navigationController id="xdx-39-AKR" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gVT-Ut-b5u">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Dol-Ip-fgv" kind="relationship" relationship="rootViewController" id="5Lm-la-7hX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uRc-Jy-2vF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
